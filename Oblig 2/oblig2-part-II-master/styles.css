@@ -1,5 +1,5 @@
 body {
-  background-image: url("images/jack-o-lantern.png"),
+  background-image: url("images/jack-o-lantern.svg"),
     linear-gradient(to bottom, #1a237e, #000000);
   background-repeat: no-repeat, no-repeat; /* First value for the image, second for the gradient */
   background-attachment: fixed;

@@ -1,0 +1,35 @@
+body {
+  background-image: url("images/jack-o-lantern.png"),
+    linear-gradient(to bottom, #1a237e, #000000);
+  background-repeat: no-repeat, no-repeat; /* First value for the image, second for the gradient */
+  background-attachment: fixed;
+  background-position: center;
+}
+
+@font-face {
+  font-family: "Shlop-Regular";
+  src: url("fonts/Shlop/Shlop-Regular.ttf.woff") format("woff"),
+    url("fonts/Shlop/Shlop-Regular.ttf.svg#Shlop-Regular") format("svg"),
+    url("fonts/Shlop/Shlop-Regular.ttf.eot"),
+    url("fonts/Shlop/Shlop-Regular.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: light;
+  font-style: light;
+}
+@font-face {
+  font-family: "Deanna";
+  src: url("fonts/Deanna/Deanna.ttf.woff") format("woff"),
+    url("fonts/Deanna/Deanna.ttf.svg#Deanna") format("svg"),
+    url("Deanna.ttf.eot"),
+    url("fonts/Deanna/Deanna.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "Shlop-Regular", sans-serif;
+}
+
+h2 {
+  font-family: "Deanna", serif;
+  font-size: 100px;
+}

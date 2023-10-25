@@ -1,9 +1,10 @@
 body {
   background-image: url("images/jack-o-lantern.svg"),
-    linear-gradient(to bottom, #1a237e, #000000);
+    linear-gradient(to bottom, #1a237e, #1f1f1f);
   background-repeat: no-repeat, no-repeat;
   background-attachment: fixed;
   background-position: center;
+  margin: 0;
 }
 
 @font-face {
@@ -15,6 +16,7 @@ body {
   font-weight: light;
   font-style: light;
 }
+
 @font-face {
   font-family: "Deanna";
   src: url("fonts/Deanna/Deanna.ttf.woff") format("woff"),
@@ -56,18 +58,10 @@ p {
   line-height: 1.5;
 }
 
-.article1 {
-  position: relative;
-}
-
-.content-container {
-  position: absolute;
-  right: 30%;
-}
-
 ul li {
   color: white;
 }
+
 .article-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -75,6 +69,8 @@ ul li {
 
 .article-content {
   /* position: relative; */
+  position: relative;
+  z-index: 1;
   display: flex;
   /* flex-direction: column; */
   min-height: 450px;
@@ -97,8 +93,59 @@ ul li {
 
 footer {
   margin: 0 auto;
-  max-width: 1200px;
-  color: red;
+  color: orange;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  text-align: center;
+}
+
+/*replacing original list styling with emojis accordingly*/
+
+#emoji-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+#scariest::before {
+  content: "\1F383";
+}
+
+#funniest::before {
+  content: "\1F631" ;
+}
+
+#creative::before {
+  content: "\1F52E" ;
+}
+
+
+.round-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: rgb(0, 0, 0);
+  color: orange;
+  border-radius: 75%;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  font-size: 15px;
+  font-family: "Vremena-Grotesk-Regular", sans-serif;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.round-button:hover {
+  background-color: #212121; 
 }
 
 @media (max-width: 960px) {
@@ -106,9 +153,21 @@ footer {
     flex-direction: column;
     margin-bottom: 75px;
   }
+  h1 {
+    text-align: center;
+    position: relative;
+    z-index: 4;
+  }
 
   .column {
     width: 100%;
+  }
+
+  .round-button {
+    right: 2;
+    width: 50px;
+    height: 25px;
+    font-size: 8px;
   }
 
   /* .article-content:nth-child(odd) .text-column {

@@ -1,16 +1,4 @@
-/* binding the fixed background image to the body and applying a gradient  */
-
-#main-body {
-  background-image: url("images/jack-o-lantern.svg"),
-    linear-gradient(to bottom, #1a237e, #080808);
-  background-repeat: no-repeat, no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  margin: 0;
-}
-
 /* all font faces used below  */
-
 @font-face {
   font-family: "Shlop-Regular";
   src: url("fonts/Shlop/Shlop-Regular.ttf.woff") format("woff"),
@@ -18,9 +6,8 @@
     url("fonts/Shlop/Shlop-Regular.ttf.eot"),
     url("fonts/Shlop/Shlop-Regular.ttf.eot?#iefix") format("embedded-opentype");
   font-weight: normal;
-  font-style:normal;
+  font-style: normal;
 }
-
 @font-face {
   font-family: "Deanna";
   src: url("fonts/Deanna/Deanna.ttf.woff") format("woff"),
@@ -30,24 +17,17 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Vremena-Grotesk-Regular";
   font-style: normal;
   font-weight: normal;
   src: url("fonts/Vremena-grotesk/VremenaGrotesk.woff") format("woff");
 }
-
-.main-heading {
-  margin-bottom: 10%;
-}
-
 h1 {
   font-family: "Shlop-Regular", sans-serif;
   font-size: 50px;
   color: orange;
 }
-
 .heading2 {
   font-family: "Deanna", serif;
   font-size: 40px;
@@ -56,15 +36,17 @@ h1 {
 }
 
 /* making the first letter in every h2 heading 2x the size of the default 40px size  */
-
 h2::first-letter {
   font-size: 80px;
 }
 
 /* applying a shadow to h2 elements when hovered over */
-
 h2:hover {
   text-shadow: 2px 2px 2px blue;
+}
+
+.main-heading {
+  margin-bottom: 10%;
 }
 
 p {
@@ -73,12 +55,89 @@ p {
   font-size: 14px;
   line-height: 1.5;
 }
+/* binding the fixed background image to the body and applying a gradient  */
+#main-body {
+  background-image: url("images/jack-o-lantern.svg"),
+    linear-gradient(to bottom, #1a237e, #080808);
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
+}
+
+ul li {
+  color: white;
+}
+
+/* making a max width for the main content in the center of the screen effectively making 2 "bezzles" */
+.article-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+
+.article-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: 450px;
+  margin-bottom: 20px;
+}
+
+.column {
+  flex: 50%;
+}
+
+.info {
+  max-width: 90%;
+}
+
+.article-image {
+  max-width: 90%;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+
+/* styling the footer to stretch across the entire bottom of the webpage  */
+footer {
+  margin: 0 auto;
+  color: orange;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+}
+
+/*replacing original list styling with emojis accordingly*/
+#emoji-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+#scariest::before {
+  content: "\1F383";
+}
+
+#funniest::before {
+  content: "\1F631";
+}
+
+#creative::before {
+  content: "\1F52E";
+}
 
 /* styling the button acting as a hyperlink to the reflection page */
-
 .round-button {
   position: fixed;
-  top: 20px;
+  top: 35px;
   right: 20px;
   background-color: rgb(0, 0, 0);
   color: orange;
@@ -100,93 +159,19 @@ p {
   background-color: #212121;
 }
 
-
-ul li {
-  color: white;
-}
-
-/* making a max width for the main content in the center of the screen effectively making 2 "bezzles" */
-
-.article-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.article-content {
-  /* position: relative; */
-  position: relative;
-  z-index: 1;
-  display: flex;
-  /* flex-direction: column; */
-  min-height: 450px;
-  margin-bottom: 20px;
-}
-
-.column {
-  flex: 50%;
-}
-
-.info {
-  max-width: 90%;
-}
-
-.article-image {
-  max-width: 90%;
-  border: 1px solid transparent;
-  border-radius: 10px;
-}
-
-/* styling the footer to stretch across the entire bottom of the webpage  */
-
-footer {
-  margin: 0 auto;
-  color: orange;
-}
-
-.footer-content {
-  position: relative;
-  z-index: 2;
-  background-color: rgb(0, 0, 0);
-  width: 100%;
-  text-align: center;
-}
-
-/*replacing original list styling with emojis accordingly*/
-
-#emoji-list {
-  list-style: none;
-  padding-left: 0;
-}
-
-#scariest::before {
-  content: "\1F383";
-}
-
-#funniest::before {
-  content: "\1F631";
-}
-
-#creative::before {
-  content: "\1F52E";
-}
-
 /* media queries to make the website more suitable for smaller viewports */
-
 @media (max-width: 960px) {
   .article-content {
     flex-direction: column;
     margin-bottom: 75px;
   }
 
-  /* centered h1 and overlapping button if they collide  */
-
   h1 {
-    text-align: center;
     position: relative;
     z-index: 4;
   }
 
-/* one column layout when screen size <960px */
+  /* one column layout when screen size <960px */
 
   .column {
     width: 100%;
@@ -196,26 +181,10 @@ footer {
 
   .round-button {
     right: 2px;
-    width: 50px;
-    height: 25px;
+    width: 70px;
+    height: 35px;
     font-size: 8px;
   }
-
-  /* .article-content:nth-child(odd) .text-column {
-    order: 2;
-  }
-
-  .article-content:nth-child(odd) .image-column {
-    order: 2;
-  }
-
-  .article-content:nth-child(even) .text-column {
-    order: 2;
-  }
-
-  .article-content:nth-child(even) .image-column {
-    order: 1;
-  } */
 
   .article-content:nth-child(odd) .text-column {
     order: 1;
@@ -233,4 +202,3 @@ footer {
     order: 2;
   }
 }
-

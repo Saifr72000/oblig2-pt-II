@@ -25,14 +25,14 @@
 }
 h1 {
   font-family: "Shlop-Regular", sans-serif;
-  font-size: 50px;
+  font-size: 60px;
   color: orange;
 }
-.heading2 {
+h2 {
   font-family: "Deanna", serif;
   font-size: 40px;
   color: orange;
-  margin-top: 0;
+  margin-top: -40px;
 }
 
 /* making the first letter in every h2 heading 2x the size of the default 40px size  */
@@ -52,7 +52,7 @@ h2:hover {
 p {
   font-family: "Vremena-Grotesk-Regular", sans-serif;
   color: white;
-  font-size: 14px;
+  font-size: 20px;
   line-height: 1.5;
 }
 /* binding the fixed background image to the body and applying a gradient  */
@@ -62,7 +62,6 @@ p {
   background-repeat: no-repeat, no-repeat;
   background-attachment: fixed;
   background-position: center;
-  /* margin: 0; */
 }
 
 ul li {
@@ -80,8 +79,8 @@ ul li {
   position: relative;
   z-index: 1;
   display: flex;
-  min-height: 450px;
-  margin-bottom: 40px;
+  min-height: 400px;
+  margin-bottom: 80px;
 }
 
 .column {
@@ -103,14 +102,15 @@ footer {
   margin: 0 auto;
   color: orange;
   min-height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
   background-color: rgb(0, 0, 0);
 }
 
 .footer-content {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  margin: auto 0;
   z-index: 2;
   width: 100%;
   text-align: center;
@@ -165,6 +165,27 @@ footer {
     flex-direction: column;
     margin-bottom: 75px;
   }
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+  
+  /* making the first letter in every h2 heading 2x the size.  */
+  h2::first-letter {
+    font-size: 60px;
+  }
+
+.footer-content {
+  bottom: 25%;
+  top: 25%;
+}
 
   h1 {
     position: relative;

@@ -62,7 +62,7 @@ p {
   background-repeat: no-repeat, no-repeat;
   background-attachment: fixed;
   background-position: center;
-  margin: 0;
+  /* margin: 0; */
 }
 
 ul li {
@@ -81,7 +81,7 @@ ul li {
   z-index: 1;
   display: flex;
   min-height: 450px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .column {

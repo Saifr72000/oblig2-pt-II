@@ -1,11 +1,15 @@
-body {
+/* binding the fixed background image to the body and applying a gradient  */
+
+#main-body {
   background-image: url("images/jack-o-lantern.svg"),
-    linear-gradient(to bottom, #1a237e, #1f1f1f);
+    linear-gradient(to bottom, #1a237e, #080808);
   background-repeat: no-repeat, no-repeat;
   background-attachment: fixed;
   background-position: center;
   margin: 0;
 }
+
+/* all font faces used below  */
 
 @font-face {
   font-family: "Shlop-Regular";
@@ -13,8 +17,8 @@ body {
     url("fonts/Shlop/Shlop-Regular.ttf.svg#Shlop-Regular") format("svg"),
     url("fonts/Shlop/Shlop-Regular.ttf.eot"),
     url("fonts/Shlop/Shlop-Regular.ttf.eot?#iefix") format("embedded-opentype");
-  font-weight: light;
-  font-style: light;
+  font-weight: normal;
+  font-style:normal;
 }
 
 @font-face {
@@ -44,11 +48,23 @@ h1 {
   color: orange;
 }
 
-h2 {
+.heading2 {
   font-family: "Deanna", serif;
   font-size: 40px;
   color: orange;
   margin-top: 0;
+}
+
+/* making the first letter in every h2 heading 2x the size of the default 40px size  */
+
+h2::first-letter {
+  font-size: 80px;
+}
+
+/* applying a shadow to h2 elements when hovered over */
+
+h2:hover {
+  text-shadow: 2px 2px 2px blue;
 }
 
 p {
@@ -58,9 +74,38 @@ p {
   line-height: 1.5;
 }
 
+/* styling the button acting as a hyperlink to the reflection page */
+
+.round-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: rgb(0, 0, 0);
+  color: orange;
+  border-radius: 75%;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  font-size: 15px;
+  font-family: "Vremena-Grotesk-Regular", sans-serif;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.round-button:hover {
+  background-color: #212121;
+}
+
+
 ul li {
   color: white;
 }
+
+/* making a max width for the main content in the center of the screen effectively making 2 "bezzles" */
 
 .article-container {
   max-width: 1200px;
@@ -91,6 +136,8 @@ ul li {
   border-radius: 10px;
 }
 
+/* styling the footer to stretch across the entire bottom of the webpage  */
+
 footer {
   margin: 0 auto;
   color: orange;
@@ -116,55 +163,39 @@ footer {
 }
 
 #funniest::before {
-  content: "\1F631" ;
+  content: "\1F631";
 }
 
 #creative::before {
-  content: "\1F52E" ;
+  content: "\1F52E";
 }
 
-
-.round-button {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background-color: rgb(0, 0, 0);
-  color: orange;
-  border-radius: 75%;
-  width: 100px;
-  height: 50px;
-  text-align: center;
-  font-size: 15px;
-  font-family: "Vremena-Grotesk-Regular", sans-serif;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 3;
-}
-
-.round-button:hover {
-  background-color: #212121; 
-}
+/* media queries to make the website more suitable for smaller viewports */
 
 @media (max-width: 960px) {
   .article-content {
     flex-direction: column;
     margin-bottom: 75px;
   }
+
+  /* centered h1 and overlapping button if they collide  */
+
   h1 {
     text-align: center;
     position: relative;
     z-index: 4;
   }
 
+/* one column layout when screen size <960px */
+
   .column {
     width: 100%;
   }
 
+  /* smaller button  */
+
   .round-button {
-    right: 2;
+    right: 2px;
     width: 50px;
     height: 25px;
     font-size: 8px;
@@ -202,3 +233,4 @@ footer {
     order: 2;
   }
 }
+

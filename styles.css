@@ -1,3 +1,5 @@
+/* Newsletter styles  */
+
 /* all font faces used below  */
 @font-face {
   font-family: "Shlop-Regular";
@@ -73,6 +75,8 @@ ul li {
   max-width: 1200px;
   margin: 0 auto;
   padding-left: 20px;
+  padding-right: 25px;
+
 }
 
 .article-content {
@@ -83,6 +87,12 @@ ul li {
   margin-bottom: 80px;
 }
 
+.article-image {
+  max-width: 90%;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+
 .column {
   flex: 50%;
 }
@@ -91,11 +101,7 @@ ul li {
   max-width: 90%;
 }
 
-.article-image {
-  max-width: 90%;
-  border: 1px solid transparent;
-  border-radius: 10px;
-}
+
 
 /* styling the footer to stretch across the entire bottom of the webpage  */
 footer {
@@ -159,11 +165,30 @@ footer {
   background-color: #212121;
 }
 
+.article-heading {
+  max-width: 50%;
+}
+
+.column.text-column {
+  padding-right: 30px
+}
+
 /* media queries to make the website more suitable for smaller viewports */
 @media (max-width: 960px) {
   .article-content {
     flex-direction: column;
     margin-bottom: 75px;
+  }
+
+  .article-image {
+    max-width: 100%;
+
+  }
+  .article-heading {
+    max-width: 100%;
+  }
+  .column.image-column {
+    margin-left: 0;
   }
 
   h1 {

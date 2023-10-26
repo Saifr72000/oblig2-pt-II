@@ -1,39 +1,60 @@
-/* reflections styles  */
+/* Reflections styles  */
 
-#main-content{
-    margin: 0 auto;
-    max-width: 1000px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 60px;
+#main-content {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 60px;
 }
 
 .reflection.first {
-    margin-top: 70px;
+  margin-top: 70px;
 }
 .reflection {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: rgb(30, 30, 30);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgb(30, 30, 30);
 }
 
 h1 {
-    color:  #CDCDC5;
-    font-size: 40px;
+  color: #cdcdc5;
+  font-size: 40px;
 }
 h2 {
-    font-size: 30px;
-    font-weight: normal;
-    color:   white;
+  font-size: 30px;
+  font-weight: normal;
+  color: white;
 }
 
 p {
-    font-size: 20px;
-    line-height: 1.5;
-    color: #CDCDC5;;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #cdcdc5;
+}
+
+.carbon-footprint-reduction {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+.carbon-footprint-reduction th,
+.carbon-footprint-reduction td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+.carbon-footprint-reduction td {
+  color: white;
+}
+
+.carbon-footprint-reduction th {
+  background-color: #f2f2f2;
 }
